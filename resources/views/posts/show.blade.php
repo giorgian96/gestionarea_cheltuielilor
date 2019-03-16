@@ -1,15 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="/posts" class="btn btn-default">Go back</a>
+    <a href="/posts" class="btn btn-default">Inapoi</a>
     <div class="card mt-3">
-        <div class="card-body">
+        <div class="card-header">
             <h3 class="card-title">{{$post->category}}</h3>
+        </div>
+        <div class="card-body">            
             <p>Type: {{$post->type}}</p>
             <p>Amount: {{$post->amount}}</p>
             <p>Date: {{$post->date}}</p>
             <p>Memo: {{$post->memo}}</p> 
-            <small>by {{$post->user->name}}</small>
+            <small>de {{$post->user->name}}</small>
         </div>              
     </div>
     @if(Auth::user()->id == $post->user_id)

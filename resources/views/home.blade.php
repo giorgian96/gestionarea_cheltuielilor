@@ -14,7 +14,6 @@
                         </div>
                     @endif
 
-                    <a href="/posts/create" class="btn btn-primary">Create post</a>
                     <h3>Your posts</h3>
                     <table class="table table-striped">
                         <tr>
@@ -36,6 +35,7 @@
                             </tr>
                         @endforeach
                     </table>
+                    <a href="/posts/create" class="btn btn-primary">Create post</a>
                 </div>
             </div>
         </div>
