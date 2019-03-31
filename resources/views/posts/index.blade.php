@@ -33,6 +33,7 @@
             @endif
             @if($loop->last) {{-- daca e ultimul loop inchidem div --}}
                 </div>
+                <br>
             @endif
         @endforeach
         {{-- paginate 

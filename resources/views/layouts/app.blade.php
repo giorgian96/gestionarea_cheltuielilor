@@ -27,5 +27,6 @@
             @yield('content')
         </div>        
     </div>
+    @include('inc.select-script')
 </body>
 </html>
