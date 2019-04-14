@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        $title = 'Pagina principala';
+        $title = 'Gestionarea cheltuielilor';
         return view('pages.index')->with('title', $title);
     } 
 

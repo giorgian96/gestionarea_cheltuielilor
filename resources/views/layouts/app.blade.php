@@ -21,7 +21,12 @@
 </head>
 <body>
     <div id="app">
-        @include('inc.navbar')
+        @php
+            $route = Route::current();
+        @endphp
+        @if($route->uri != "/")
+            @include('inc.navbar')
+        @endif
         <div class="container mt-3">
             @include('inc.messages')
             @yield('content')
