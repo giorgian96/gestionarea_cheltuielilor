@@ -26,11 +26,14 @@
         @endphp
         @if($route->uri != "/")
             @include('inc.navbar')
-        @endif
-        <div class="container mt-3">
+            <div class="container mt-3">
+                @include('inc.messages')
+                @yield('content')
+            </div> 
+        @else
             @include('inc.messages')
             @yield('content')
-        </div>        
+        @endif               
     </div>
     @include('inc.select-script')
 </body>
