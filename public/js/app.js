@@ -49001,6 +49001,8 @@ var app = new Vue({
   el: '#app'
 });
 
+__webpack_require__(/*! ./select-script */ "./resources/js/select-script.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -49127,6 +49129,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/select-script.js":
+/*!***************************************!*\
+  !*** ./resources/js/select-script.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.showInput = function (type) {
+  if (type.value == 'Income') {
+    // Disable expenses select
+    document.getElementById('Expenses').getElementsByClassName('form-control')[0].disabled = true;
+    document.getElementById('Income').getElementsByClassName('form-control')[0].disabled = false; // Show income div
+
+    document.getElementById('Expenses').style.display = 'none';
+    document.getElementById('Income').style.display = 'block';
+  } else if (type.value == 'Expenses') {
+    // Disable income select
+    document.getElementById('Expenses').getElementsByClassName('form-control')[0].disabled = false;
+    document.getElementById('Income').getElementsByClassName('form-control')[0].disabled = true; // Show expenses div
+
+    document.getElementById('Expenses').style.display = 'block';
+    document.getElementById('Income').style.display = 'none';
+  }
+};
 
 /***/ }),
 
