@@ -3,5 +3,5 @@
 @section('content')
     <h1>{{$title}}</h1>
     <p>Aplicatie web pentru gestionarea cheltuielilor</p>
-    <small>Versiunea 0.2</small>
+    <small>Versiunea 0.3</small>
 @endsection
