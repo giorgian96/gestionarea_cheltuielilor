@@ -1,7 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Cheltuieli</h1>
+    {{-- Get all the months in which we have posts --}}
+    @php
+        $months = [];
+        foreach ($posts as $post) {
+            $date_obj = new DateTime($post->date);
+            if(!in_array($date_obj->format('F Y'), $months)){
+                array_push($months, $date_obj->format('F Y'));
+            }
+        }
+    @endphp
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selectați luna
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            @foreach ($months as $month)
+                <a href="#" class="dropdown-item">{{$month}}</a>
+            @endforeach
+        </div>
+    </div>
     @if(count($posts) > 0)
         @php 
             $date = "";
