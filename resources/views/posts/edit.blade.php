@@ -6,16 +6,16 @@
         @method('PUT')
         @csrf
         <div class="form-group">
-            <label for="type">Type</label>
-            <select name="type" class="form-control" onclick="showInput(this)">
+            <label for="category">Category</label>
+            <select name="category" class="form-control" onclick="showInput(this)">
                 <option value="Income">Income</option>
                 <option value="Expenses">Expenses</option>
             </select>
         </div>
         {{-- Incomes --}}
         <div id="Income" class="form-group">
-            <label for="category">Category</label>
-            <select name="category" class="form-control">
+            <label for="type">Type</label>
+            <select name="type" class="form-control">
                 <option value="Salary">Salary</option>
                 <option value="Sale">Sale</option>
                 <option value="Rent">Rent</option>
@@ -26,8 +26,8 @@
         </div>
         {{-- Expenses --}}
         <div id="Expenses" class="form-group">
-            <label for="category">Category</label>
-            <select name="category" class="form-control">
+            <label for="type">Type</label>
+            <select name="type" class="form-control">
                 <option value="Food">Food</option>
                 <option value="Bills">Bills</option>
                 <option value="Home">Home</option>

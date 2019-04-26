@@ -1,5 +1,5 @@
-window.showInput = function(type){
-    if(type.value == 'Income'){
+window.showInput = function(category){
+    if(category.value == 'Income'){
         // Disable expenses select
         document.getElementById('Expenses').getElementsByClassName('form-control')[0].disabled = true;
         document.getElementById('Income').getElementsByClassName('form-control')[0].disabled = false;
@@ -7,7 +7,7 @@ window.showInput = function(type){
         // Show income div
         document.getElementById('Expenses').style.display = 'none';
         document.getElementById('Income').style.display = 'block';
-    }else if(type.value == 'Expenses'){
+    }else if(category.value == 'Expenses'){
         // Disable income select
         document.getElementById('Expenses').getElementsByClassName('form-control')[0].disabled = false;
         document.getElementById('Income').getElementsByClassName('form-control')[0].disabled = true;

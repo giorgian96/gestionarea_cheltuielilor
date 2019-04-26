@@ -41,13 +41,13 @@ class PostsController extends Controller
         $expenses = [];
 
         foreach ($posts as $post) {
-            if($post->type == 'Income'){
+            if($post->category == 'Income'){
                 if(array_key_exists($post->date, $incomes)){
                     $incomes[$post->date] += $post->amount;
                 }else{
                     $incomes[$post->date] = $post->amount;
                 }
-            }else if($post->type == 'Expenses'){
+            }else if($post->category == 'Expenses'){
                 if(array_key_exists($post->date, $expenses)){
                     $expenses[$post->date] += $post->amount;
                 }else{

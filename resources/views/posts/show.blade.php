@@ -4,10 +4,10 @@
     <a href="/posts" class="btn btn-default">Inapoi</a>
     <div class="card mt-3">
         <div class="card-header">
-            <h3 class="card-title">{{$post->category}}</h3>
+            <h3 class="card-title">{{$post->type}}</h3>
         </div>
         <div class="card-body">            
-            <p>Type: {{$post->type}}</p>
+            <p>Category: {{$post->category}}</p>
             <p>Amount: {{$post->amount}}</p>
             <p>Date: {{$post->date}}</p>
             <p>Memo: {{$post->memo}}</p> 
